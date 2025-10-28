@@ -1,0 +1,25 @@
+# Core Framework
+streamlit>=1.38.0
+python-dotenv>=1.0.1
+
+# PDF Processing
+PyPDF2>=3.0.1
+
+# LangChain Ecosystem
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-groq>=0.1.0
+langchain-huggingface>=0.1.0
+
+# Embeddings & Vector Store
+faiss-cpu>=1.8.0
+sentence-transformers>=3.0.0
+
+# Optional Utilities
+requests>=2.32.3
+
+# For caching / performance (optional but recommended)
+tqdm>=4.66.4
+
+# Compatible Python version
+# Python >= 3.10
