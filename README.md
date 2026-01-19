@@ -23,6 +23,43 @@ Whether you're analyzing research papers, study material, or business reports �
 
 
 ---
+## 🔄 How It Works
+
+```mermaid
+graph TB
+    subgraph Setup["📄 Document Processing (One-Time Setup)"]
+        A[Upload PDFs] --> B[PyPDF2: Extract Text]
+        B --> C[TextSplitter: Split into Chunks]
+        C --> D[HuggingFace: Generate Embeddings]
+        D --> E[FAISS: Store Vector DB]
+    end
+    
+    subgraph Chat["💬 Conversational Interface"]
+        F[User Asks Question]
+        F --> G{Has Chat History?}
+    end
+    
+    subgraph RAG["🔍 RAG Workflow"]
+        G -->|Yes| H[Contextualize Question with History]
+        G -->|No| I[Use Question As-Is]
+        H --> J[FAISS: Retrieve Relevant Chunks]
+        I --> J
+        J --> K[LLaMA 3.1 via Groq: Generate Answer]
+        K --> L[Update Chat History]
+    end
+    
+    L --> M[Display Response to User]
+    M --> F
+    E -.->|Vector Store Ready| F
+    
+    style A fill:#9D00FF,color:#fff
+    style E fill:#4CAF50,color:#fff
+    style F fill:#2196F3,color:#fff
+    style K fill:#FF9800,color:#fff
+    style M fill:#2196F3,color:#fff
+```
+
+---
 
 ## Core Features
 
