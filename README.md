@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Monoton&size=80&pause=12&speed=15&color=9D00FF&center=true&vCenter=true&width=2000&height=200&lines=📚+Meet+DocuMind!;Chat+with+Your+PDFs+Effortlessly!;Ask,+Analyze,++Understand+Documents!;Powered+by+Groq+LLaMA+3.1!;RAG+Intelligence+for+Smarter+Insights!;Made+with+❤️+by+Aryan+Gupta!)](https://github.com/aryanguptacsvtu/DocuMind-RAG)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Monoton&size=80&pause=12&speed=15&color=9D00FF&center=true&vCenter=true&width=2000&height=200&lines=📚+Meet+DocuMind!;Chat+with+Your+PDFs+Effortlessly!;Ask,+Analyze,++Understand+Documents!;Powered+by+Groq+with+OpenAI+GPT!;RAG+Intelligence+for+Smarter+Insights!;Made+with+❤️+by+Aryan+Gupta!)](https://github.com/aryanguptacsvtu/DocuMind-RAG)
 
 ---
 
@@ -7,7 +7,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version">
   <img src="https://img.shields.io/badge/Framework-Streamlit-red.svg" alt="Streamlit">
-  <img src="https://img.shields.io/badge/AI-Groq_LLaMA_3.1_8B-orange.svg" alt="Groq AI">
+  <img src="https://img.shields.io/badge/AI-openAI_gpt_oss_20b-orange.svg" alt="Groq">
   <img src="https://img.shields.io/badge/Vector_DB-FAISS-green.svg" alt="FAISS">
   <img src="https://img.shields.io/badge/Category-Document_Chatbot-yellow.svg" alt="Category">
  
@@ -17,7 +17,7 @@
 ## 🧠 About the Project  
 
 **DocuMind-RAG** is an intelligent **AI-powered PDF chatbot** that lets you upload multiple documents and **chat directly with their content**.  
-It uses **Retrieval-Augmented Generation (RAG)** with **LangChain**, **FAISS**, and **Groq LLaMA 3.1** to deliver accurate, context-aware answers from your files.
+It uses **Retrieval-Augmented Generation (RAG)** with **LangChain**, **FAISS**, and **Groq (openai/gpt-oss-20b)** to deliver accurate, context-aware answers from your files.
 
 Whether you're analyzing research papers, study material, or business reports — **DocuMind** transforms your PDFs into interactive conversations.
 
@@ -44,7 +44,7 @@ graph TB
         G -->|No| I[Use Question As-Is]
         H --> J[FAISS: Retrieve Relevant Chunks]
         I --> J
-        J --> K[LLaMA 3.1 via Groq: Generate Answer]
+        J --> K[openAI gpt-oss-20b via Groq: Generate Answer]
         K --> L[Update Chat History]
     end
     
@@ -66,7 +66,7 @@ graph TB
 ✅ Upload and process multiple PDF files  
 ✅ Extract, chunk, and embed text using `HuggingFace` transformers  
 ✅ Store vector embeddings efficiently with `FAISS`  
-✅ Query your PDFs conversationally using `LLaMA 3-8B (Groq API)`  
+✅ Query your PDFs conversationally using `openai/gpt-oss-20b (Groq API)`  
 ✅ Memory-aware responses with contextual follow-ups  
 ✅ Clean Streamlit UI for real-time chatting  
 
@@ -76,7 +76,7 @@ graph TB
 
 * **Frontend:** [Streamlit](https://streamlit.io/)
 * **Backend & RAG:** [LangChain](https://www.langchain.com/)
-* **LLM:** [Groq](https://groq.com/) (Llama 3.1 8B Instant)
+* **LLM:** [Groq](https://groq.com/) (openai/gpt-oss-20b)
 * **Embeddings:** [Hugging Face](https://huggingface.co/sentence-transformers) (`all-MiniLM-L6-v2`)
 * **Vector Store:** [FAISS](https://github.com/facebookresearch/faiss) (from Meta)
 * **PDF Parsing:** [PyPDF2](https://pypdf2.readthedocs.io/en/latest/)
